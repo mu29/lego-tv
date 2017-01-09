@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "691522989339",
+    "firebase_url": "https://legotv-185b1.firebaseio.com",
+    "project_id": "legotv-185b1",
+    "storage_bucket": "legotv-185b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691522989339:android:542436063449c104",
+        "android_client_info": {
+          "package_name": "mu29.legotv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691522989339-qnf7t76is1mql23v0n2j1haftmc5llgu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJQ8HICDm4dbWrkC7qOBKdamKO7NtjsQE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

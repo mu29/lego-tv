@@ -10,12 +10,15 @@ buildscript {
         classpath 'me.tatarka:gradle-retrolambda:3.3.1'
         // Google
         classpath 'com.google.gms:google-services:3.0.0'
+        // AndroidAnnotations
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     }
 }
 
 allprojects {
     repositories {
         jcenter()
+        mavenCentral()
     }
 }
 
