@@ -5,11 +5,15 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import mu29.legotv.data.model.Program;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.GET;
+import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -18,6 +22,10 @@ import rx.schedulers.Schedulers;
  */
 
 public interface RestClient {
+
+    // 동영상 목록 받기
+    @GET("/lego-tv.json")
+    Observable<List<Program>> fetchProgramList();
 
     class Factory {
         private static RestClient instance;
@@ -38,7 +46,7 @@ public interface RestClient {
                 .create();
 
             Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("")
+                .baseUrl("yeoubi.net")
                 .addCallAdapterFactory(new RxThreadCallAdapter(Schedulers.io(), AndroidSchedulers.mainThread()))
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(client)
