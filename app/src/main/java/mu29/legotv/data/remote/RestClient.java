@@ -46,7 +46,7 @@ public interface RestClient {
                 .create();
 
             Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("yeoubi.net")
+                .baseUrl("http://yeoubi.net/")
                 .addCallAdapterFactory(new RxThreadCallAdapter(Schedulers.io(), AndroidSchedulers.mainThread()))
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(client)
