@@ -9,9 +9,9 @@
 retrofit2  
 AndroidAnnotations  
 Picasso  
-YouTubeAndroidPlayerApi
-RetroLambda
-RxJava
+YouTubeAndroidPlayerApi  
+RetroLambda  
+RxJava  
 RxAndroid
 
 ## Contact
