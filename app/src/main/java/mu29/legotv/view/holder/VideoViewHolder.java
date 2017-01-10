@@ -12,6 +12,7 @@ import java.util.Locale;
 
 import mu29.legotv.R;
 import mu29.legotv.adapter.DefaultListener;
+import mu29.legotv.data.local.PreferencesHelper;
 import mu29.legotv.data.model.Video;
 import mu29.legotv.util.CircleTransform;
 
@@ -28,7 +29,7 @@ public class VideoViewHolder extends DefaultViewHolder<Video> {
     private ImageView thumbnailIV;
 
     public static VideoViewHolder newInstance(ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_program, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_video, parent, false);
         return new VideoViewHolder(view);
     }
 
@@ -45,6 +46,8 @@ public class VideoViewHolder extends DefaultViewHolder<Video> {
     public void onBindView(Video item, DefaultListener listener) {
         titleTV.setText(String.format(Locale.KOREA, "레고® %s", item.title));
         minuteTV.setText(String.format(Locale.KOREA, "%s", item.minute));
+        boolean read = PreferencesHelper.getInstance(context).getString(item.videoId).equals("READ");
+        readView.setVisibility(read ? View.VISIBLE : View.INVISIBLE);
 
         Picasso.with(context)
             .load(item.thumbnailUrl())
