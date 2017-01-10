@@ -18,7 +18,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -26,39 +26,33 @@
             android:background="@drawable/rectangle_white">
 
             <ImageView
+                android:src="@mipmap/ic_launcher"
                 android:id="@+id/iv_thumbnail"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                tools:background="@color/gray_300"/>
+                android:layout_gravity="center_vertical"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="8dp" />
+
+            <TextView
+                tools:text="레고® 닌자고"
+                android:id="@+id/tv_title"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <View
-                android:layout_width="match_parent"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="4dp"
-                android:layout_height="0.5dp"
-                android:background="@color/gray_300"/>
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp">
-
-                <TextView
-                    tools:text="레고® 닌자고"
-                    android:id="@+id/tv_title"
-                    android:ems="14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    tools:text="21개의 영상"
-                    android:id="@+id/tv_count"
-                    android:layout_gravity="right"
-                    android:textSize="12sp"
-                    android:textColor="@color/gray_400"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </FrameLayout>
+            <TextView
+                tools:text="21개의 영상"
+                android:id="@+id/tv_count"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/gray_400"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <View

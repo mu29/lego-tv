@@ -13,6 +13,7 @@ import java.util.Locale;
 import mu29.legotv.R;
 import mu29.legotv.adapter.DefaultListener;
 import mu29.legotv.data.model.Program;
+import mu29.legotv.util.CircleTransform;
 
 /**
  * InJung Chung
@@ -47,6 +48,7 @@ public class ProgramViewHolder extends DefaultViewHolder<Program> {
             .load(item.imageUrl())
             .error(R.mipmap.ic_launcher)
             .centerCrop()
+            .transform(new CircleTransform()).fit().centerCrop()
             .into(imageIV);
 
         if (listener == null) return;
